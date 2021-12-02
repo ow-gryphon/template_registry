@@ -1,0 +1,17 @@
+version: '2'
+services:
+  example_project:
+    container_name: example_project
+    image: example_project
+    build:
+      context: ../../../
+      dockerfile: src/utilities/docker/Dockerfile
+    volumes:
+      - "../../../:/code"
+  notebooks:
+    image: example_project
+    ports:
+      - "8888:8888"
+    command: sh -c "jupyter notebook --ip=0.0.0.0 --no-browser"
+    volumes:
+      - "../../../:/code"

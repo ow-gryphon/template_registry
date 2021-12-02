@@ -1,0 +1,11 @@
+{
+    "arguments": [
+        {
+            "name": "fileName",
+            "type": "str",
+            "required": true,
+            "help": "Name of the file that will be created."
+        }
+    ],
+    "dependencies": ["scikit-learn"]
+}
