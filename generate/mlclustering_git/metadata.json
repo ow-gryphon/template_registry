@@ -4,8 +4,9 @@
             "name": "fileName",
             "type": "str",
             "required": true,
-            "help": "Name of the file that will be created."
+            "help": "Name for the clustering problem:"
         }
     ],
-    "dependencies": ["scikit-learn"]
+    "dependencies": ["scikit-learn"],
+    "display_name": "Clustering"
 }
