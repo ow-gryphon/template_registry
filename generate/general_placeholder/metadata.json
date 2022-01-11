@@ -1,0 +1,17 @@
+{
+    "arguments": [
+        {
+            "name": "fileName",
+            "type": "str",
+            "required": true,
+            "help": "Name for the problem:"
+        }
+    ],
+    "dependencies": ["scikit-learn"],
+    "display_name": "Placeholder",
+    "description": "This template makes this and that and other stuff",
+    "topic": ["Price Elasticity", "Financial Planning", "Cyber risk"],
+    "sector": ["Financial Services", "Healthcare", "Consumer Goods"],
+    "methodology": ["Classification", "Regression", "Clustering", "NLP"],
+    "keywords": ["ml","lala","regression","generic","notebook"]
+}

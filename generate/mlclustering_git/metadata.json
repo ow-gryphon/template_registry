@@ -8,5 +8,8 @@
         }
     ],
     "dependencies": ["scikit-learn"],
-    "display_name": "Clustering"
+    "display_name": "Numerical Clustering",
+    "description": "Overview of popular numerical clustering methods",
+    "methodology": ["Clustering"],
+    "keywords": ["clustering","k-means","kmeans"]
 }
