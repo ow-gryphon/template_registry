@@ -1,5 +1,5 @@
 {
-    "dependencies": ["scikit-learn", "nltk],
+    "dependencies": ["scikit-learn", "nltk"],
     "display_name": "Customer Segmentation",
     "description": "Test description",
     "sector": ["Banking", "Healthcare", "Insurance", "Manufacturing"],
