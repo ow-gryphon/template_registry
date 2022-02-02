@@ -317,25 +317,25 @@ def fit_glm(used_data, y_var, x_var, family = IdentityGaussian(), weight = None,
     """
 
     if len(x_var) == 1:
-        x_val = used_data[x_var].as_matrix().reshape(-1, 1)
+        x_val = used_data[x_var].values.reshape(-1, 1)
     else:
-        x_val = used_data[x_var].as_matrix()
+        x_val = used_data[x_var].values
 
-    y_val = used_data[y_var].as_matrix()
+    y_val = used_data[y_var].values
     if weight is None:
         weights = None
     else:
-        weights = used_data[weight].as_matrix()
+        weights = used_data[weight].values
 
     if len(x_var) == 1:
-        x_val = used_data[x_var].as_matrix().reshape(-1, 1)
+        x_val = used_data[x_var].values.reshape(-1, 1)
     else:
-        x_val = used_data[x_var].as_matrix()
-    y_val = used_data[y_var].as_matrix()
+        x_val = used_data[x_var].values
+    y_val = used_data[y_var].values
     if weight is None:
         weights = None
     else:
-        weights = used_data[weight].as_matrix()
+        weights = used_data[weight].values
 
     # Step 1, get initial guesses for regression by running standard OLS (possibly with sample weights)
     new_reg = linear_model.LinearRegression(fit_intercept=True)

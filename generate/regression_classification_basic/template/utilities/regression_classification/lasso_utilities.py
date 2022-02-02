@@ -1,9 +1,8 @@
 import sklearn as sk
-from sklearn import linear_model
+from sklearn import linear_model, metrics
 from sklearn.preprocessing import StandardScaler
 import pandas as pd
 from collections import OrderedDict
-from .stats import *
 
 
 def lasso_ols(dataset, DV, IVs, forced_in=None, intercept=True, alpha_list=None):
@@ -99,7 +98,7 @@ def lasso_ols(dataset, DV, IVs, forced_in=None, intercept=True, alpha_list=None)
 
         results['Variables'] = ";".join(var_list)
 
-        output = output.append(results, ignore_index=True)
+        output = pd.concat([output, pd.DataFrame([results])]).reset_index(drop=True)
 
     return output
 
@@ -182,7 +181,7 @@ def lasso_logistic(dataset, DV, IVs, forced_in=None, intercept=True, C_list=None
             'Converged?'] = fitted_model.n_iter_[0] < fitted_model.max_iter  # Assuming max number of iterations met means no convergence
 
         predictions = fitted_model.predict_proba(X)[:,1]
-        results['Gini'] = gini(Y, predictions)
+        results['Gini'] = 2 * metrics.roc_auc_score(y_true = Y, y_score = predictions) - 1
 
         if intercept:
             results['Intercept'] = fitted_model.intercept_[0]
@@ -199,6 +198,7 @@ def lasso_logistic(dataset, DV, IVs, forced_in=None, intercept=True, C_list=None
 
         results['Variables'] = ";".join(var_list)
 
-        output = output.append(results, ignore_index=True)
+        output = pd.concat([output, pd.DataFrame([results])]).reset_index(drop=True)
 
     return output
+
