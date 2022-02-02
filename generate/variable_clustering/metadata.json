@@ -1,7 +1,0 @@
-{
-    "dependencies": ["scikit-learn"],
-    "display_name": "Variable Clustering",
-    "description": "Variable Clustering with hierarchical clustering approaches",
-    "methodology": ["Clustering"],
-    "keywords": ["clustering", "hierarchical"]
-}

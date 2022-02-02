@@ -1,0 +1,7 @@
+{
+    "display_name": "Basic data exploration for NCT",
+    "description": "This template provides examples of data profiling and exploration for both numerical and categorical fields. It relies primarily on pandas and matplotlib capabilities.",
+    "dependencies": ["pandas","numpy","matplotlib"],
+    "keywords": ["pandas", "data exploration", "NCT"],
+    "methodology": ["Data Exploration"]
+}
