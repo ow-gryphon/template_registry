@@ -4,5 +4,6 @@
     "topic": ["Price Elasticity", "Financial Planning", "Cyber risk"],
     "sector": ["Financial Services", "Healthcare", "Consumer Goods"],
     "methodology": ["Clustering", "NLP"],
-    "keywords": ["regression","generic", "notebook"]
+    "keywords": ["regression","generic", "notebook"],
+    "command": "generate"
 }
